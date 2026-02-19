@@ -15,13 +15,13 @@ Unlike standard chatbots, Sovereign Archivist breaks tasks down into a logical p
 
 ```mermaid
 graph LR
-    subgraph "Neural Nodes"
+    subgraph Nodes
     A[Strategist] -->|Plans| B[Scout]
     B -->|Extracts| C[Fact-Checker]
     C -->|Verifies| D[Writer]
     end
-    D -->|Markdown| E[Cyberpunk UI]
-    E -->|Export| F[Aesthetic PDF]
+    D --> E[Cyberpunk UI]
+    E --> F[Aesthetic PDF]
 🚀 Key Features
 Multi-Agent Reasoning: Uses a Strategist to expand queries, a Scout for live web access, a Fact-Checker to catch hallucinations, and a Writer for professional synthesis.
 
