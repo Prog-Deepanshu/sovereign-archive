@@ -21,7 +21,7 @@ graph LR
     C -->|Verifies| D[Writer]
     end
     D --> E[Cyberpunk UI]
-    E --> F[Aesthetic PDF]
+    E --> F[Aesthetic PDF]'''
 🚀 Key Features
 Multi-Agent Reasoning: Uses a Strategist to expand queries, a Scout for live web access, a Fact-Checker to catch hallucinations, and a Writer for professional synthesis.
 
