@@ -1,103 +1,85 @@
-# SOVEREIGN (v1.0)
-> **The Autonomous Neural Research Protocol**
+# 🌐 SOVEREIGN ARCHIVIST v1.0
+### *Local-First Multi-Agent Intelligence & Research Orchestrator*
 
-![Status](https://img.shields.io/badge/STATUS-OPERATIONAL-cyan?style=for-the-badge&logoColor=white)
-![Core](https://img.shields.io/badge/CORE-LLAMA3-blue?style=for-the-badge&logoColor=white)
-![Latency](https://img.shields.io/badge/LATENCY-REALTIME-red?style=for-the-badge&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.109-05998b?style=flat-square&logo=fastapi)
+![LangGraph](https://img.shields.io/badge/LangGraph-Agentic-blue?style=flat-square)
+![Ollama](https://img.shields.io/badge/Local_LLM-Ollama-orange?style=flat-square)
 
----
-
-## ⚡ Overview
-
-**SOVEREIGN** is a next-generation autonomous research agent designed to synthesize high-fidelity intelligence reports in real-time. It moves beyond simple RAG (Retrieval-Augmented Generation) by employing a **Multi-Agent Cognitive Architecture** that mimics a human research team.
-
-Using a specialized graph-based workflow (`LangGraph`), Sovereign decomposes complex objectives into sub-tasks, executes parallel search operations, fact-checks its own findings, and compiles everything into a stunning, download-ready dossier.
-
-### 🧠 The Neural Architecture
-The system is composed of four distinct neural agents working in concert:
-1.  **STRATEGIST** (Zap): Analyzes the user's objective and formulates deep-dive search vectors.
-2.  **SCOUT** (Search): Executes parallel reconnaissance across the live web to gather raw data.
-3.  **FACT-CHECKER** (Shield): Scrutinizes gathered intelligence for contradictions, hallucinations, and validity.
-4.  **WRITER** (Pen): Synthesizes verified data into a cohesive, narrative-driven intelligence report.
+Sovereign Archivist is a professional-grade research engine that runs entirely on your local hardware. By leveraging **LangGraph** to coordinate a multi-agent "Neural Network," it automates the process of web-scouring, fact-checking, and technical writing—ensuring 100% data privacy and zero API costs.
 
 ---
 
-## 💎 Key Features
+## ⚡ The Agentic Workflow
+Unlike standard chatbots, Sovereign Archivist breaks tasks down into a logical pipeline where specialized agents critique each other's work.
 
-- **Autonomous Research Loop**: Just give it a topic. Sovereign handles the rest.
-- **Self-Correcting Logic**: Built-in fact-checking step ensures high reliability of information.
-- **Real-Time Neural Link**: Watch the agents "think" and resolve tasks via a live terminal feed.
-- **Aesthetic Intelligence Reports**: Export your research as a beautifully formatted, dark-mode PDF dossier.
-- **Local Privacy**: Powered by local LLMs (Llama 3 & Mistral) via Ollama. No data leaves your machine.
+```mermaid
+graph LR
+    subgraph "Neural Nodes"
+    A[Strategist] -->|Plans| B[Scout]
+    B -->|Extracts| C[Fact-Checker]
+    C -->|Verifies| D[Writer]
+    end
+    D -->|Markdown| E[Cyberpunk UI]
+    E -->|Export| F[Aesthetic PDF]
+```
 
----
+## 🚀 Key Features
+**Multi-Agent Reasoning**: Uses a Strategist to expand queries, a Scout for live web access, a Fact-Checker to catch hallucinations, and a Writer for professional synthesis.
+
+**Privacy-First**: Powered by Ollama. Your research data never leaves your machine.
+
+**Real-Time Streaming**: Built with FastAPI Server-Sent Events (SSE), allowing you to see the AI's thought process as it happens.
+
+**"Cyberpunk" Dashboard**: A high-fidelity Next.js interface with motion-tracked agent status and a live system telemetry log.
+
+**Aesthetic PDF Engine**: One-click export that generates high-contrast, professional technical whitepapers.
 
 ## 🛠️ Tech Stack
+- **Brain**: LangGraph & LangChain
+- **Inference**: Llama 3 (Logic) & Mistral (Synthesis) via Ollama
+- **Backend**: FastAPI (Python)
+- **Frontend**: Next.js 14, Tailwind CSS, Framer Motion
+- **PDF Logic**: jsPDF (Text-to-Buffer Engine)
 
-### **Cortex (Backend)**
--   **LangGraph**: Cyclic graph architecture for agent orchestration.
--   **LangChain**: LLM tooling and abstractions.
--   **FastAPI**: High-performance async server for real-time event streaming (`SSE`).
--   **Ollama**: Local inference engine running Llama 3 (Logic) and Mistral (Creative).
+## � Installation
 
-### **Interface (Frontend)**
--   **Next.js 14**: React framework for the neural interface.
--   **Tailwind CSS**: Utility-first styling for the "Cyber-Native" aesthetic.
--   **Framer Motion**:Fluid, cinematic UI animations.
--   **jsPDF**: Client-side aesthetic PDF generation engine.
+### 1. Model Setup (Ollama)
+Ensure you have Ollama installed and running:
 
----
-
-## 🚀 Deployment Protocol
-
-### Prerequisites
-1.  **Ollama**: Installed and running (`ollama serve`).
-2.  **Python 3.10+**
-3.  **Node.js 18+**
-
-### Phase 1: Initialize Cortex (Backend)
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/sovereign-researcher.git
-cd sovereign-researcher
-
-# Ignite Python Environment
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-
-# Install Neural Dependencies
-pip install -r requirements.txt
-
-# Download Agent Models (REQUIRED)
 ollama pull llama3
 ollama pull mistral
+```
 
-# Launch Cortex
+### 2. Backend Initialization
+```bash
+# In the project root
+python -m venv .venv
+# On Windows:
+.venv\Scripts\activate
+# On Mac/Linux:
+# source .venv/bin/activate
+
+pip install -r requirements.txt
 python main.py
 ```
 
-### Phase 2: Initialize Interface (Frontend)
+### 3. Frontend Initialization
 ```bash
-# Open a new terminal
 cd frontend/researcher
-
-# Install Packages
 npm install
-
-# Launch Interface
 npm run dev
 ```
 
-### Phase 3: Execute
-Access the Neural Interface at `http://localhost:3000`. Enter your target objective and watch Sovereign work.
+## 🧪 System Stress Test
+To see the Fact-Checker node in action, try the "Hallucination Trap":
 
----
+**Query**: "Research the impact of the 2025 underwater volcanic eruption in the Great Lakes."
 
-## 📸 Interface Preview
+**Outcome**: The system will identify the geological impossibility and flag the lack of verifiable evidence in the live telemetry log, rather than hallucinating a response.
 
-*(Add screenshots here)*
-
----
-
-## 📜 License
-MIT License. **Sovereign** is open research technology.
+## 👨� Author
+**Deepanshu**
+Class 11 Student & AI Engineer
+Focusing on Local LLMs, Python Frameworks, and Agentic Workflows.
