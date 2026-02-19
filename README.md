@@ -81,5 +81,5 @@ To see the Fact-Checker node in action, try the "Hallucination Trap":
 
 ## 👨� Author
 **Deepanshu**
-Class 11 Student & AI Engineer
+AI Engineer
 Focusing on Local LLMs, Python Frameworks, and Agentic Workflows.
